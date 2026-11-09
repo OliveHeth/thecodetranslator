@@ -1,0 +1,24 @@
+{
+  "name": "thecodetranslator",
+  "version": "1.0.0",
+  "description": "Translate binary (7-bit, 8-bit, UTF-8) and Morse code to text and back. No dependencies.",
+  "main": "codetranslator.js",
+  "files": ["codetranslator.js"],
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": ["binary", "binary-translator", "text-to-binary", "morse-code", "morse", "ascii", "utf-8", "code-translator"],
+  "author": "Olive Heth (https://thecodetranslator.com)",
+  "license": "MIT",
+  "homepage": "https://thecodetranslator.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OliveHeth/thecodetranslator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OliveHeth/thecodetranslator/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

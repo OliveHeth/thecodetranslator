@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Binary &amp; Morse Code Translator — demo | The Code Translator</title>
+<meta name="description" content="Free open-source demo: translate binary and Morse code to text and back, as you type. Runs in your browser, nothing uploaded.">
+<style>
+  :root { color-scheme: light dark; --accent: #2563eb; }
+  * { box-sizing: border-box; }
+  body { font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 760px; margin: 0 auto; padding: 32px 20px; }
+  h1 { font-size: 1.8rem; margin: 0 0 4px; }
+  p.lead { margin: 0 0 24px; opacity: .8; }
+  .modes { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .modes button { border: 1px solid #8884; background: transparent; color: inherit; padding: 6px 14px; border-radius: 999px; cursor: pointer; font: inherit; }
+  .modes button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  label { display: block; font-weight: 600; margin: 16px 0 6px; }
+  textarea { width: 100%; min-height: 120px; padding: 12px; border: 1px solid #8886; border-radius: 8px; font: 15px/1.5 ui-monospace, Menlo, Consolas, monospace; background: transparent; color: inherit; resize: vertical; }
+  .status { min-height: 1.5em; font-size: .9rem; margin-top: 6px; opacity: .8; }
+  .status.err { color: #dc2626; opacity: 1; }
+  footer { margin-top: 40px; font-size: .9rem; opacity: .8; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<h1>Binary &amp; Morse Code Translator</h1>
+<p class="lead">Open-source demo of <a href="https://thecodetranslator.com">The Code Translator</a>. Translates as you type, right in your browser.</p>
+
+<div class="modes" role="group" aria-label="Translation">
+  <button data-mode="auto" aria-pressed="true">Auto-detect → text</button>
+  <button data-mode="toBinary" aria-pressed="false">Text → binary</button>
+  <button data-mode="toMorse" aria-pressed="false">Text → Morse</button>
+</div>
+
+<label for="in">Input</label>
+<textarea id="in" spellcheck="false" placeholder="Try 01001000 01101001 or ... --- ...">01001000 01101001</textarea>
+
+<label for="out">Result</label>
+<textarea id="out" readonly></textarea>
+<div class="status" id="status" aria-live="polite"></div>
+
+<footer>
+  Full site with more codes: <a href="https://thecodetranslator.com">thecodetranslator.com</a> ·
+  Source: <a href="https://github.com/OliveHeth/thecodetranslator">GitHub</a> · MIT License
+</footer>
+
+<script src="codetranslator.js"></script>
+<script>
+  var CT = window.CodeTranslator;
+  var input = document.getElementById('in');
+  var output = document.getElementById('out');
+  var status = document.getElementById('status');
+  var mode = 'auto';
+
+  function run() {
+    var v = input.value;
+    status.className = 'status';
+    try {
+      if (mode === 'toBinary') {
+        output.value = CT.textToBinary(v);
+        status.textContent = v ? 'Text → 8-bit binary (UTF-8)' : '';
+      } else if (mode === 'toMorse') {
+        output.value = CT.textToMorse(v);
+        status.textContent = v ? 'Text → Morse code' : '';
+      } else {
+        var kind = CT.detect(v);
+        if (kind === 'binary') {
+          output.value = CT.binaryToText(v);
+          status.textContent = 'Detected ' + CT.detectBinary(v) + ' binary';
+        } else if (kind === 'morse') {
+          output.value = CT.morseToText(v);
+          status.textContent = 'Detected Morse code';
+        } else {
+          output.value = CT.textToBinary(v);
+          status.textContent = v ? 'Plain text detected, shown as binary' : '';
+        }
+      }
+    } catch (e) {
+      output.value = '';
+      status.textContent = e.message;
+      status.className = 'status err';
+    }
+  }
+
+  document.querySelectorAll('.modes button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      mode = b.dataset.mode;
+      document.querySelectorAll('.modes button').forEach(function (x) {
+        x.setAttribute('aria-pressed', x === b ? 'true' : 'false');
+      });
+      run();
+    });
+  });
+  input.addEventListener('input', run);
+  run();
+</script>
+</body>
+</html>
