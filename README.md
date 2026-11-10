@@ -47,4 +47,4 @@ A **code** swaps each letter for a fixed symbol, so anyone with the chart can re
 
 - Website: [thecodetranslator.com](https://thecodetranslator.com)
 - Email: [support@thecodetranslator.com](mailto:support@thecodetranslator.com)
-- [Facebook](https://www.facebook.com/thecodetranslator) · [Pinterest](https://www.pinterest.com/TheCodeTranslator/) · [X](https://x.com/CodeTranslator9)
+- [Facebook](https://www.facebook.com/thecodetranslator) · [Pinterest](https://www.pinterest.com/TheCodeTranslator/) · [X](https://x.com/CodeTranslator9) · [YouTube](https://youtu.be/F4CcXNir54M) · [Vimeo](https://vimeo.com/share/9cbf5384-db60-45d5-89f1-62977af5733c?share=copy&fl=sv&fe=ci)
