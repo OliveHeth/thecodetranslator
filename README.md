@@ -35,6 +35,7 @@ Try it: `01001000 01101001` decodes to **Hi**. [Open the binary code translator 
 | [Text to binary converter](https://thecodetranslator.com/binary-code-translator/text-to-binary/) | Turn any message into 8-bit binary |
 | [Binary alphabet chart](https://thecodetranslator.com/binary-code-translator/alphabet/) | A to Z in binary, with a [printable PDF](https://thecodetranslator.com/binary-code-translator/alphabet/#worksheet) |
 | [Binary to ASCII converter](https://thecodetranslator.com/binary-code-translator/binary-to-ascii/) | Each character with its ASCII code |
+| [Binary numbers](https://thecodetranslator.com/binary-code-translator/binary-numbers/) | Binary, decimal, hex and octal converter with a 0-255 chart |
 | [Words in binary](https://thecodetranslator.com/binary-code-translator/words/) | Common words already written in binary |
 | [How to read binary](https://thecodetranslator.com/binary-code-translator/how-to-read-binary/) | Step-by-step guide to decoding by hand |
 | [10101 code](https://thecodetranslator.com/binary-code-translator/10101-code/) | What 10101 means (U, Y or 21) in 5-bit binary and Baudot |
