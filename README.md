@@ -36,6 +36,9 @@ Try it: `01001000 01101001` decodes to **Hi**. [Open the binary code translator 
 | [Binary alphabet chart](https://thecodetranslator.com/binary-code-translator/alphabet/) | A to Z in binary, with a [printable PDF](https://thecodetranslator.com/binary-code-translator/alphabet/#worksheet) |
 | [Binary to ASCII converter](https://thecodetranslator.com/binary-code-translator/binary-to-ascii/) | Each character with its ASCII code |
 | [Binary numbers](https://thecodetranslator.com/binary-code-translator/binary-numbers/) | Binary, decimal, hex and octal converter with a 0-255 chart |
+| [Decimal to binary converter](https://thecodetranslator.com/binary-code-translator/decimal-to-binary/) | Turn any whole number into binary, with the division steps shown |
+| [Binary to decimal converter](https://thecodetranslator.com/binary-code-translator/binary-to-decimal/) | Convert 0s and 1s to a regular number, with the place-value working |
+| [Binary to hex converter](https://thecodetranslator.com/binary-code-translator/binary-to-hex/) | Group bits in fours and see each hex digit, with the steps shown |
 | [Words in binary](https://thecodetranslator.com/binary-code-translator/words/) | Common words already written in binary |
 | [How to read binary](https://thecodetranslator.com/binary-code-translator/how-to-read-binary/) | Step-by-step guide to decoding by hand |
 | [10101 code](https://thecodetranslator.com/binary-code-translator/10101-code/) | What 10101 means (U, Y or 21) in 5-bit binary and Baudot |
